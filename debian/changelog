@@ -1,5 +1,5 @@
-keylime (6.1.0-1) unstable; urgency=low
+keylime (6.1.0-1) hirsute; urgency=medium
 
-  * source package automatically created by stdeb 0.10.0
+  * Initial packaging.
 
  -- Utkarsh Gupta <utkarsh@debian.org>  Wed, 14 Apr 2021 19:34:16 +0530

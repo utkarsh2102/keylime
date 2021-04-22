@@ -1,12 +1,19 @@
 #!/usr/bin/make -f
 
 export PYBUILD_NAME=keylime
-export KEYLIME_CONFIG=$(CURDIR)/debian/keylime.conf
+export KEYLIME_CONFIG=$(CURDIR)/keylime.conf
 export KEYLIME_TEST=True
 
 %:
 	dh $@ --with python3 --buildsystem=pybuild
 
 override_dh_auto_test:
+#	disable build-time tests since it requires tpm-enabled machine
 #	cp $(CURDIR)/keylime.conf $(CURDIR)/debian/keylime.conf
 #	dh_auto_test
+
+override_dh_installsystemd:
+	dh_installsystemd -p keylime --name keylime_agent
+	dh_installsystemd -p keylime --name keylime_registrar
+	dh_installsystemd -p keylime --name keylime_verifier
+	dh_installsystemd

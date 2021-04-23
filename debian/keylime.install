@@ -1,1 +1,2 @@
 tpm_cert_store var/lib/keylime
+README.md usr/share/keylime

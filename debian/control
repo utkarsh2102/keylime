@@ -1,8 +1,25 @@
 Source: keylime
-Maintainer: Utkarsh Gupta <utkarsh@debian.org>
 Section: python
 Priority: optional
-Build-Depends: dh-python, python3-setuptools, python3-all, debhelper (>= 12)
+Maintainer: Utkarsh Gupta <utkarsh@debian.org>
+Build-Depends: debhelper-compat (= 12),
+  dh-python,
+  python3-setuptools,
+  python3-all,
+  python3-sqlalchemy,
+  python3-gnupg,
+  python3-m2crypto,
+  python3-tornado,
+  python3-cryptography,
+  python3-simplejson,
+  python3-dbus,
+  python3-yaml,
+  python3-zmq,
+  python3-alembic,
+  python3-requests,
+  tpm2-tools,
+  tpm2-abrmd,
+  libtss2-dev
 Standards-Version: 4.5.0
 Homepage: https://keylime.dev
 
@@ -10,13 +27,6 @@ Package: python3-keylime
 Architecture: all
 Depends: ${misc:Depends}, ${python3:Depends}
 Description: TPM-based key bootstrapping and system integrity measurement
- # Keylime
- .
- [![Build
- Status](https://travis-ci.org/keylime/keylime.svg?branch=master)](https://travis-ci.org/keylime/keylime) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/keylime-project/community)
- .
- ![keylime](doc/keylime.png?raw=true "Title")
- .
  Keylime is an open source scalable trust system harnessing TPM Technology.
  .
  Keylime provides an end-to-end solution for bootstrapping hardware rooted
@@ -30,4 +40,3 @@ Description: TPM-based key bootstrapping and system integrity measurement
  users alike, without the need for a deep understanding of the lower levels of a
  TPM's operations. Amongst many scenarios, it well suited to tenants who need to
  remotely attest machines not under their own full control (such as a consumer of
-

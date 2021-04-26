@@ -2,4 +2,4 @@ keylime (6.1.0-1) hirsute; urgency=medium
 
   * Initial packaging.
 
- -- Utkarsh Gupta <utkarsh@debian.org>  Wed, 14 Apr 2021 19:34:16 +0530
+ -- Utkarsh Gupta <utkarsh.gupta@canonical.com>  Wed, 14 Apr 2021 19:34:16 +0530

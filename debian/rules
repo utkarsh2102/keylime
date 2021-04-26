@@ -11,6 +11,6 @@ export KEYLIME_CONFIG=$(CURDIR)/keylime.conf
 override_dh_auto_test:
 
 override_dh_installsystemd:
-	dh_installsystemd -p keylime --name keylime_agent
-	dh_installsystemd -p keylime --name keylime_registrar
-	dh_installsystemd -p keylime --name keylime_verifier
+	dh_installsystemd --no-start -p keylime --name keylime_agent
+	dh_installsystemd --no-start -p keylime --name keylime_registrar
+	dh_installsystemd --no-start -p keylime --name keylime_verifier

@@ -2,7 +2,7 @@ Source: keylime
 Maintainer: Utkarsh Gupta <utkarsh.gupta@canonical.com>
 Section: python
 Priority: optional
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper-compat (= 11),
                dh-python,
                libtss2-dev,
                python3-alembic,
